@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 // import { getGits } from "../helpers/getGifs.js";
 import { useFetchGifts } from "../hooks/useFetchGifts.js";
 import { GifItem } from "./GifItem.jsx";
+import PropTypes from "prop-types";
 
 export const GitGrid = ({ category }) => {
 
@@ -36,4 +37,8 @@ console.log({images, isLoading});
 
         </>
     )
+}
+GitGrid.propTypes = {
+category: PropTypes.string.isRequired,
+
 }
